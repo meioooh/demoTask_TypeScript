@@ -8,7 +8,8 @@ Before downloading, make sure **Git** is installed on your system.
 Run CLI and type:
     _git -v_ or _git --version_
 
-If it installed - you will see the version number in the output . 
+If it installed - you will see the version number in the output. 
+
 If not, go to [Git](https://git-scm.com/install) and Install it Step-By-Step.
 
 
