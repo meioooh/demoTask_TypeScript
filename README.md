@@ -14,7 +14,7 @@ Run CLI and type:
 
 
 After that, project can be downloaded by simply running from CLI:
-**_git clone https://github.com/meioooh/demoTask_TypeScript.git_**
+```git clone https://github.com/meioooh/demoTask_TypeScript.git```
 
 ### Install project
 
@@ -23,8 +23,8 @@ To install dependencies you can read:
 
 or 
    1. Open CLI inside of cloned project;
-   2. Run command _npm ci_ & wait until it downloaded (**This installs packages from package.json**);
-   3. Run command _npx playwright install --with-deps_ & wait until it downloaded (**This installs Playwright Browsers**).
+   2. Run command ```npm ci``` & wait until it downloaded (**This installs packages from package.json**);
+   3. Run command ```npx playwright install --with-deps``` & wait until it downloaded (**This installs Playwright Browsers**).
 
 
 ### Running tests
