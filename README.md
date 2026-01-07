@@ -1,7 +1,6 @@
 # My first project based on TypeScript + Playwright.
 
-## It contains a few automated UI tests
-## Which can easily runned with CLI.
+## It contains a few automated UI tests for https://the-internet.herokuapp.com/.
 
 ### Download project
 
