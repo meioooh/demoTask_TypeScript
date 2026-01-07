@@ -2,7 +2,7 @@
 
 ## It contains a few automated UI tests for [the-internet.herokuapp.com](https://the-internet.herokuapp.com/).
 
-### Download project
+### Download project:
 
 Before downloading, make sure **Git** is installed on your system.
 Run CLI and type:
@@ -16,7 +16,7 @@ Run CLI and type:
 After that, project can be downloaded by simply running from CLI:
 ```git clone https://github.com/meioooh/demoTask_TypeScript.git```
 
-### Install project
+### Install project:
 
 To install dependencies you can read:
     _.github/workflows/playwright.yml_
@@ -27,4 +27,8 @@ or
    3. Run command ```npx playwright install --with-deps``` & wait until it downloaded (**This installs Playwright Browsers**).
 
 
-### Running tests
+### Running tests:
+    1. Open project folder **demoTask_TypeScript**;
+    2. Run command ```npx playwright test```;
+    3. Wait unti it finished;
+    4. To view test-report, run command ```npx playwright show-report```.
