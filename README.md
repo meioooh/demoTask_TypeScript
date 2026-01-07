@@ -28,7 +28,7 @@ or
 
 
 ### Running tests:
-    1. Open project folder **demoTask_TypeScript**;
-    2. Run command ```npx playwright test```;
-    3. Wait unti it finished;
-    4. To view test-report, run command ```npx playwright show-report```.
+   1. Open project folder **demoTask_TypeScript**;
+   2. Run command ```npx playwright test```;
+   3. Wait unti it finished;
+   4. To view test-report, run command ```npx playwright show-report```.
