@@ -1,4 +1,4 @@
 **My first project based on TypeScript + Playwright.**
 
-It contains few automated UI tests
+It contains a few automated UI tests
 Which can easily runned with CLI.
