@@ -35,8 +35,6 @@ test('Login', async ({ page }) => {
 
     await expect(page.locator('div#flash.flash.success')).toBeVisible(); // видно сообщение об успехе
     await expect(page.locator('div#flash.flash.success')).toContainText('You logged into a secure area!'); // ожидаемый текст внутри сообщения
-
-
 });
 
 });
