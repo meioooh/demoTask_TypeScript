@@ -14,7 +14,8 @@ test('Page title', async ({ page }) => {
 test('Navigation', async ({ page }) => {
     await page.goto('/');
     await page.getByRole('link', { name: 'Form Authentication'}).click(); // переходим по ссылке form authentication
-    await page.waitForURL('**\/login'); // дождались полной загрузки страницы /login
+    await page.waitForURL('**\/login'); // дождались полной загрузки страницы '/login'
+    await expect(page.locator('h2')).toContainText('Login Page'); // страница содержит текст 'Login Page'
 });
 
 });
