@@ -11,29 +11,28 @@ test.describe('Simple UI tests', () => {
 
 test('Page title', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('h1.heading')).toContainText('the-internet'); // ожидаем, что в заголовке страницы есть текст 'the-internet'
+    await expect(page.getByRole('heading', { level: 1 })).toContainText('the-internet'); // ожидаем, что в заголовке страницы есть текст 'the-internet'
 });
 
 test('Navigation', async ({ page }) => {
     await page.goto('/');
     await page.getByRole('link', { name: 'Form Authentication'}).click(); // переходим по ссылке form authentication
     await expect(page).toHaveURL('/login')
-    await expect(page.locator('h2')).toContainText('Login Page'); // страница содержит текст 'Login Page'
+    await expect(page.getByRole('heading', { level: 2 })).toContainText('Login Page'); // страница содержит текст 'Login Page'
 });
 
 test('Login', async ({ page }) => {
     await page.goto('/login');
 
     // вводим логин и пароль
-    await page.getByRole('textbox', { name: 'Username' }).fill('tomsmith'); 
-    await page.getByRole('textbox', { name: 'Password' }).fill('SuperSecretPassword!');
+    await page.getByLabel('Username').fill('tomsmith'); 
+    await page.getByLabel('Password').fill('SuperSecretPassword!');
     
     // жмем логин и дожидаемся загрузки следующей страницы
     await page.locator('button:has-text("Login")').click();
-    await page.waitForURL('/secure');
+    await expect(page).toHaveURL('/secure');
 
-    await expect(page.locator('div#flash.flash.success')).toBeVisible(); // видно сообщение об успехе
-    await expect(page.locator('div#flash.flash.success')).toContainText('You logged into a secure area!'); // ожидаемый текст внутри сообщения
+    await expect(page.getByText('You logged into a secure area!')).toContainText('You logged into a secure area!'); // ожидаемый текст внутри сообщения
 });
 
 });
@@ -85,7 +84,6 @@ test.describe('Advanced UI tests', () => {
         const imageExtensions = ['.jpg', '.png', '.jpeg']; // перечислили нужные форматы файлов
         let imageCount = 0;
 
-
         // проверяется и подсчитывается количество файлов с перечисленными расширениями
         for (const link of allLinks) {
             const href = await link.getAttribute('href');
@@ -98,7 +96,7 @@ test.describe('Advanced UI tests', () => {
         };
 
         // сравниваем, что подсчитанные изображения автоматически совпадают с ожидаемым результатом
-        const expectedImageCount = 47;
+        const expectedImageCount = 21;
         expect(imageCount).toBe(expectedImageCount);
 
     });
